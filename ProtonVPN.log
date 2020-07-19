@@ -1,0 +1,509 @@
+2020-03-05 16:17:22 +0000 : ERROR : AlamofireWrapper.swift : received(error:forRequest:success:failure:) : 221 : 24 - Network request failed with error: Error Domain=ch.protonvpn.error Code=401 "Invalid access token" UserInfo={NSLocalizedDescription=Invalid access token}
+2020-03-05 16:17:22 +0000 : INFO : AlamofireWrapper.swift : fetchNewAccessToken(_:) : 257 : 21 - Refresh access token failed with error: fetchFailure
+2020-03-05 16:17:22 +0000 : ERROR : AlamofireWrapper.swift : received(error:forRequest:success:failure:) : 221 : 24 - Network request failed with error: Error Domain=ch.protonvpn.error Code=401 "Invalid access token" UserInfo={NSLocalizedDescription=Invalid access token}
+2020-03-05 16:17:22 +0000 : INFO : AlamofireWrapper.swift : fetchNewAccessToken(_:) : 257 : 21 - Refresh access token failed with error: fetchFailure
+2020-03-05 16:17:23 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-03-05 16:17:23 +0000 : INFO : VpnManager.swift : setState(withError:) : 221 : 23 - VPN state - Invalid
+2020-03-05 16:18:01 +0000 : ERROR : AlamofireWrapper.swift : received(error:forRequest:success:failure:) : 240 : 24 - Network request failed with error: Error Domain=ch.protonvpn.error Code=8002 "Wrong username or password" UserInfo={NSLocalizedDescription=Wrong username or password}
+2020-03-05 16:18:01 +0000 : ERROR : AppSessionManager.swift : logIn(username:password:success:failure:) : 109 : 22 - Failed to obtain user's auth credentials: Wrong username or password
+2020-03-05 16:18:01 +0000 : ERROR : LoginViewController.swift : showError(_:) : 267 : 24 - Wrong username or password
+2020-03-05 16:18:05 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-03-05 16:19:18 +0000 : WARN : AlamofireWrapper.swift : received(error:forRequest:success:failure:) : 235 : 28 - Human verification request received
+2020-03-05 16:19:56 +0000 : INFO : VpnManager.swift : setState(withError:) : 221 : 23 - VPN state - Invalid
+2020-03-05 16:20:08 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-03-05 16:20:33 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 164 : 17 - Connect started
+2020-03-05 16:20:33 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 112 : 17 - Loading connection configuration
+2020-03-05 16:20:33 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:completion:) : 130 : 17 - Configuring connection
+2020-03-05 16:20:38 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 152 : 17 - Loading connection configuration
+2020-03-05 16:20:38 +0000 : INFO : VpnManager.swift : setState(withError:) : 221 : 23 - VPN state - Invalid
+2020-03-05 16:20:38 +0000 : INFO : VpnManager.swift : setState(withError:) : 221 : 23 - VPN state - Disconnected
+2020-03-05 16:20:38 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 163 : 25 - Starting VPN tunnel
+2020-03-05 16:20:38 +0000 : INFO : VpnManager.swift : setState(withError:) : 221 : 23 - VPN state - Connecting to: 74.119.146.42
+2020-03-05 16:20:39 +0000 : INFO : VpnManager.swift : setState(withError:) : 221 : 23 - VPN state - Connected to: 74.119.146.42
+2020-03-05 16:36:45 +0000 : INFO : VpnManager.swift : setState(withError:) : 221 : 23 - VPN state - Connected to: 74.119.146.42
+2020-03-05 16:36:50 +0000 : INFO : AppStateManager.swift : disconnect(completion:) : 173 : 17 - Disconnect started
+2020-03-05 16:36:50 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 174 : 17 - Closing VPN tunnel
+2020-03-05 16:36:50 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 205 : 21 - On Demand set
+2020-03-05 16:36:50 +0000 : INFO : VpnManager.swift : setState(withError:) : 221 : 23 - VPN state - Disconnecting from: 74.119.146.42
+2020-03-05 16:36:50 +0000 : INFO : VpnManager.swift : setState(withError:) : 221 : 23 - VPN state - Disconnected
+2020-06-30 13:22:43 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-06-30 13:22:43 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-06-30 13:22:43 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-06-30 13:22:43 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-06-30 13:22:43 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-06-30 13:22:43 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-06-30 13:22:43 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription (401); Internal response code: n/a;
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/refresh 
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-06-30 13:22:45 +0000 : ERROR : AlamofireWrapper.swift : didReceiveError(_:error:success:failure:) : 219 : 20 - Network request failed with error: Error Domain=ch.protonvpn.error Code=10013 "Invalid refresh token" UserInfo={NSLocalizedDescription=Invalid refresh token}
+2020-06-30 13:22:45 +0000 : ERROR : AccessRequestHelper.swift : fetchNewAccessToken(_:currentError:failure:) : 63 : 26 - User logged out due to refresh access token failure with error: Error Domain=ch.protonvpn.error Code=10013 "Invalid refresh token" UserInfo={NSLocalizedDescription=Invalid refresh token}
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/refresh (422); Internal response code: n/a;
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (401); Internal response code: n/a;
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (401); Internal response code: n/a;
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/refresh 
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/refresh 
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/refresh (422); Internal response code: n/a;
+2020-06-30 13:22:45 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/refresh (422); Internal response code: n/a;
+3 "Invalid refresh token" UserInfo={NSLocalizedDescription=Invalid refresh token}
+2020-06-30 13:22:45 +0000 : ERROR : AccessRequestHelper.swift : fetchNewAccessToken(_:currentError:failure:) : 63 : 26 - User logged out due to refresh access token failure with error: Error Domain=ch.protonvpn.error Code=10013 "Invalid refresh token" UserInfo={NSLocalizedDescription=Invalid refresh token}
+2020-06-30 13:22:46 +0000 : ERROR : AlamofireWrapper.swift : didReceiveError(_:error:success:failure:) : 219 : 20 - Network request failed with error: Error Domain=ch.protonvpn.error Code=10013 "Invalid refresh token" UserInfo={NSLocalizedDescription=Invalid refresh token}
+2020-06-30 13:22:46 +0000 : ERROR : AccessRequestHelper.swift : fetchNewAccessToken(_:currentError:failure:) : 63 : 26 - User logged out due to refresh access token failure with error: Error Domain=ch.protonvpn.error Code=10013 "Invalid refresh token" UserInfo={NSLocalizedDescription=Invalid refresh token}
+2020-06-30 13:22:46 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-06-30 13:22:47 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-06-30 13:23:04 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/info 
+2020-06-30 13:23:05 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/info (200); Internal response code: 1000;
+2020-06-30 13:23:05 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth 
+2020-06-30 13:23:05 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth (422); Internal response code: n/a;
+2020-06-30 13:23:05 +0000 : ERROR : AlamofireWrapper.swift : didReceiveError(_:error:success:failure:) : 219 : 20 - Network request failed with error: Error Domain=ch.protonvpn.error Code=8002 "Wrong username or password" UserInfo={NSLocalizedDescription=Wrong username or password}
+2020-06-30 13:23:05 +0000 : ERROR : AppSessionManager.swift : logIn(username:password:success:failure:) : 110 : 22 - Failed to obtain user's auth credentials: Wrong username or password
+2020-06-30 13:23:05 +0000 : ERROR : LoginViewController.swift : showError(_:) : 268 : 24 - Wrong username or password
+2020-06-30 13:23:32 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-06-30 13:23:32 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-06 10:47:20 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-06 10:47:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-06 10:47:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-06 10:47:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-06 10:47:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-06 10:47:21 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-06 10:47:21 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-06 10:47:21 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (401); Internal response code: n/a;
+2020-07-06 10:47:21 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-06 10:47:21 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (401); Internal response code: n/a;
+2020-07-06 10:47:21 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-06 10:47:22 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-06 10:47:45 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-06 10:47:45 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-06 10:47:45 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-07 02:45:41 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-07 02:45:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-07 02:45:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-07 02:45:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-07 02:45:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-07 02:45:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-07 02:45:42 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-07 02:45:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-07 02:45:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (401); Internal response code: n/a;
+2020-07-07 02:45:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (401); Internal response code: n/a;
+2020-07-07 02:45:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-07 02:45:43 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-07 02:46:46 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/users/available?Name=PK.Patomsiri 
+2020-07-07 02:46:47 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/users/available?Name=PK.Patomsiri (409); Internal response code: n/a;
+2020-07-07 02:46:47 +0000 : ERROR : AlamofireWrapper.swift : didReceiveError(_:error:success:failure:) : 219 : 20 - Network request failed with error: Error Domain=ch.protonvpn.error Code=12106 "Username already used" UserInfo={NSLocalizedDescription=Username already used}
+2020-07-07 02:46:47 +0000 : ERROR : SignUpFormViewController.swift : showError(_:) : 218 : 24 - Username already used
+2020-07-07 02:47:04 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/info 
+2020-07-07 02:47:04 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/info (200); Internal response code: 1000;
+2020-07-07 02:47:04 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth 
+2020-07-07 02:47:05 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth (422); Internal response code: n/a;
+2020-07-07 02:47:05 +0000 : ERROR : AlamofireWrapper.swift : didReceiveError(_:error:success:failure:) : 219 : 20 - Network request failed with error: Error Domain=ch.protonvpn.error Code=8002 "Wrong username or password" UserInfo={NSLocalizedDescription=Wrong username or password}
+2020-07-07 02:47:05 +0000 : ERROR : AppSessionManager.swift : logIn(username:password:success:failure:) : 110 : 22 - Failed to obtain user's auth credentials: Wrong username or password
+2020-07-07 02:47:05 +0000 : ERROR : LoginViewController.swift : showError(_:) : 268 : 24 - Wrong username or password
+2020-07-07 02:54:02 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-07 02:54:02 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-07 02:54:02 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-07 02:54:02 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-07 02:54:02 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-07 02:54:02 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-07 02:54:02 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-07 02:54:02 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (401); Internal response code: n/a;
+2020-07-07 02:54:02 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (401); Internal response code: n/a;
+2020-07-07 02:54:03 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-07 02:54:03 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-07 02:54:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/info 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/info (200); Internal response code: 1000;
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth (200); Internal response code: 1000;
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription (200); Internal response code: 1000;
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (200); Internal response code: 1000;
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/status 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans/default 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (200); Internal response code: 1000;
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 (200); Internal response code: 1000;
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/status (200); Internal response code: 1000;
+2020-07-07 02:54:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans/default (200); Internal response code: 1000;
+2020-07-07 02:54:20 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-07 02:54:21 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-07 02:54:21 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-07 02:54:21 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-07 02:54:21 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-07 02:54:21 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-07 02:54:33 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 159 : 17 - Connect started
+2020-07-07 02:54:33 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:54:33 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:54:33 +0000 : ERROR : VpnManager.swift : setState(withError:) : 373 : 22 - VPN error: Missing protocol or protocol has invalid type
+2020-07-07 02:54:33 +0000 : INFO : VpnManager.swift : connect(configuration:completion:) : 130 : 21 - About to start connection process
+2020-07-07 02:54:33 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 249 : 17 - Creating connection configuration
+2020-07-07 02:54:33 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:vpnManager:completion:) : 274 : 17 - Configuring connection
+2020-07-07 02:54:39 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 296 : 17 - Loading connection configuration
+2020-07-07 02:54:39 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Invalid
+2020-07-07 02:54:40 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 307 : 25 - Starting VPN tunnel
+2020-07-07 02:54:40 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 74.119.146.40
+2020-07-07 02:54:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-07-07 02:54:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-07 02:54:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-07 02:54:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-07 02:54:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-07 02:54:43 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connected to: 74.119.146.40
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription (200); Internal response code: 1000;
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/status 
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans/default 
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (200); Internal response code: 1000;
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (200); Internal response code: 1000;
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/status (200); Internal response code: 1000;
+2020-07-07 02:54:43 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 (200); Internal response code: 1000;
+2020-07-07 02:54:44 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans/default (200); Internal response code: 1000;
+2020-07-07 02:54:44 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-07 02:54:45 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-07 02:54:45 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-07 02:55:13 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-07 02:55:13 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-07 02:55:19 +0000 : INFO : AppStateManager.swift : disconnect(completion:) : 168 : 17 - Disconnect started
+2020-07-07 02:55:19 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:55:19 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:55:19 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnecting from: 74.119.146.40
+2020-07-07 02:55:19 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-07 02:55:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-07 02:55:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-07 02:55:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-07 02:55:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-07 02:55:26 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 159 : 17 - Connect started
+2020-07-07 02:55:26 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:55:26 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:55:26 +0000 : INFO : VpnManager.swift : connect(configuration:completion:) : 130 : 21 - About to start connection process
+2020-07-07 02:55:26 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 249 : 17 - Creating connection configuration
+2020-07-07 02:55:26 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:vpnManager:completion:) : 274 : 17 - Configuring connection
+2020-07-07 02:55:26 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 296 : 17 - Loading connection configuration
+2020-07-07 02:55:26 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 307 : 25 - Starting VPN tunnel
+2020-07-07 02:55:26 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 185.159.157.54
+2020-07-07 02:55:30 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connected to: 185.159.157.54
+2020-07-07 02:55:30 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-07 02:55:30 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-07 02:55:48 +0000 : INFO : AppStateManager.swift : disconnect(completion:) : 168 : 17 - Disconnect started
+2020-07-07 02:55:48 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:55:48 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:55:49 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnecting from: 185.159.157.54
+2020-07-07 02:55:49 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-07 02:55:49 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-07 02:55:49 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-07 02:55:49 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-07 02:55:49 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-07 02:55:49 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 159 : 17 - Connect started
+2020-07-07 02:55:49 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:55:49 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:55:49 +0000 : INFO : VpnManager.swift : connect(configuration:completion:) : 130 : 21 - About to start connection process
+2020-07-07 02:55:49 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 249 : 17 - Creating connection configuration
+2020-07-07 02:55:49 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:vpnManager:completion:) : 274 : 17 - Configuring connection
+2020-07-07 02:55:49 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 296 : 17 - Loading connection configuration
+2020-07-07 02:55:49 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 307 : 25 - Starting VPN tunnel
+2020-07-07 02:55:50 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 185.159.157.42
+2020-07-07 02:55:53 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connected to: 185.159.157.42
+2020-07-07 02:55:53 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-07 02:55:53 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-07 02:56:13 +0000 : INFO : AppStateManager.swift : disconnect(completion:) : 168 : 17 - Disconnect started
+2020-07-07 02:56:13 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:56:13 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:56:13 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnecting from: 185.159.157.42
+2020-07-07 02:56:13 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-07 02:56:57 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 185.159.157.42
+2020-07-07 02:56:57 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:56:57 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:56:57 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnecting from: 185.159.157.42
+2020-07-07 02:56:57 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-07 02:57:25 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 159 : 17 - Connect started
+2020-07-07 02:57:25 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:57:25 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:57:25 +0000 : INFO : VpnManager.swift : connect(configuration:completion:) : 130 : 21 - About to start connection process
+2020-07-07 02:57:25 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 249 : 17 - Creating connection configuration
+2020-07-07 02:57:25 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:vpnManager:completion:) : 274 : 17 - Configuring connection
+2020-07-07 02:57:25 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 296 : 17 - Loading connection configuration
+2020-07-07 02:57:25 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Invalid
+2020-07-07 02:57:25 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 307 : 25 - Starting VPN tunnel
+2020-07-07 02:57:25 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 185.159.157.86
+2020-07-07 02:57:32 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connected to: 185.159.157.86
+2020-07-07 02:57:32 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-07 02:57:34 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-07 02:57:37 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 159 : 17 - Connect started
+2020-07-07 02:57:37 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:57:37 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:57:37 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnecting from: 185.159.157.86
+2020-07-07 02:57:37 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-07 02:57:37 +0000 : INFO : VpnManager.swift : connect(configuration:completion:) : 130 : 21 - About to start connection process
+2020-07-07 02:57:37 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 249 : 17 - Creating connection configuration
+2020-07-07 02:57:37 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:vpnManager:completion:) : 274 : 17 - Configuring connection
+2020-07-07 02:57:38 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 296 : 17 - Loading connection configuration
+2020-07-07 02:57:38 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 307 : 25 - Starting VPN tunnel
+2020-07-07 02:57:38 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 185.159.157.30
+2020-07-07 02:57:38 +0000 : INFO : VpnGateway.swift : stopConnecting(userInitiated:) : 263 : 17 - Connecting cancelled, userInitiated: true
+2020-07-07 02:57:38 +0000 : INFO : AppStateManager.swift : disconnect(completion:) : 168 : 17 - Disconnect started
+2020-07-07 02:57:38 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:57:38 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:57:38 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnecting from: 185.159.157.30
+2020-07-07 02:57:38 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-07 02:57:39 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 159 : 17 - Connect started
+2020-07-07 02:57:39 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 02:57:39 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 02:57:39 +0000 : INFO : VpnManager.swift : connect(configuration:completion:) : 130 : 21 - About to start connection process
+2020-07-07 02:57:39 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 249 : 17 - Creating connection configuration
+2020-07-07 02:57:39 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:vpnManager:completion:) : 274 : 17 - Configuring connection
+2020-07-07 02:57:39 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 296 : 17 - Loading connection configuration
+2020-07-07 02:57:39 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 307 : 25 - Starting VPN tunnel
+2020-07-07 02:57:39 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 185.159.157.13
+2020-07-07 02:57:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-07-07 02:57:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-07 02:57:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-07 02:57:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-07 02:57:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-07 02:57:45 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connected to: 185.159.157.13
+2020-07-07 02:57:45 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-07 02:57:47 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-07 03:00:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-07 03:00:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions; Internal response code: n/a;
+2020-07-07 03:00:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription; Internal response code: n/a;
+2020-07-07 03:00:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location; Internal response code: n/a;
+2020-07-07 03:00:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn; Internal response code: n/a;
+2020-07-07 03:00:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig; Internal response code: n/a;
+2020-07-07 03:00:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/status 
+2020-07-07 03:00:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 
+2020-07-07 03:00:19 +0000 : ERROR : AppSessionManager.swift : retrievePropertiesAndLogIn(success:failure:) : 195 : 20 - Failed to obtain user's VPN properties: We could not reach Proton servers
+2020-07-07 03:00:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans/default 
+2020-07-07 03:00:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-07 03:00:21 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/status (200); Internal response code: 1000;
+2020-07-07 03:00:21 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans/default (200); Internal response code: 1000;
+2020-07-07 03:00:21 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 (200); Internal response code: 1000;
+2020-07-07 03:00:33 +0000 : INFO : AppStateManager.swift : disconnect(completion:) : 168 : 17 - Disconnect started
+2020-07-07 03:00:33 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 03:00:33 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 03:00:33 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnecting from: 185.159.157.13
+2020-07-07 03:00:33 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-07 03:00:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-07-07 03:00:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-07 03:00:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-07 03:00:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-07 03:00:41 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription (200); Internal response code: 1000;
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/status 
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans/default 
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (200); Internal response code: 1000;
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (200); Internal response code: 1000;
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 (200); Internal response code: 1000;
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/status (200); Internal response code: 1000;
+2020-07-07 03:00:42 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans/default (200); Internal response code: 1000;
+2020-07-07 03:00:43 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-07 03:00:43 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-07 03:00:43 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-07 03:01:02 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 159 : 17 - Connect started
+2020-07-07 03:01:02 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 03:01:02 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 03:01:02 +0000 : INFO : VpnManager.swift : connect(configuration:completion:) : 130 : 21 - About to start connection process
+2020-07-07 03:01:02 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 249 : 17 - Creating connection configuration
+2020-07-07 03:01:02 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:vpnManager:completion:) : 274 : 17 - Configuring connection
+2020-07-07 03:01:02 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 296 : 17 - Loading connection configuration
+2020-07-07 03:01:02 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 307 : 25 - Starting VPN tunnel
+2020-07-07 03:01:02 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 185.159.157.73
+2020-07-07 03:01:06 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connected to: 185.159.157.73
+2020-07-07 03:01:06 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-07 03:01:07 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-07 05:32:57 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-07 05:32:57 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-07 05:32:57 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-07-07 05:32:57 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-07 05:32:57 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-07 05:32:57 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-07 05:32:57 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-07 05:32:57 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-07 05:32:58 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription (200); Internal response code: 1000;
+2020-07-07 05:32:58 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-07 05:32:58 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/status 
+2020-07-07 05:32:58 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 
+2020-07-07 05:32:58 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans/default 
+2020-07-07 05:32:58 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (200); Internal response code: 1000;
+2020-07-07 05:32:58 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-07 05:32:58 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (200); Internal response code: 1000;
+2020-07-07 05:33:00 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans/default (200); Internal response code: 1000;
+2020-07-07 05:33:00 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 (200); Internal response code: 1000;
+2020-07-07 05:33:01 +0000 : ERROR : AppStateManager.swift : connect(withConfiguration:) : 156 : 21 - Connecting with scores older than 2 hours
+2020-07-07 05:33:01 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 159 : 17 - Connect started
+2020-07-07 05:33:01 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-07 05:33:01 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/status (200); Internal response code: 1000;
+2020-07-07 05:33:01 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-07 05:33:01 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-07 05:33:01 +0000 : INFO : VpnManager.swift : connect(configuration:completion:) : 130 : 21 - About to start connection process
+2020-07-07 05:33:01 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 249 : 17 - Creating connection configuration
+2020-07-07 05:33:01 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:vpnManager:completion:) : 274 : 17 - Configuring connection
+2020-07-07 05:33:01 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 296 : 17 - Loading connection configuration
+2020-07-07 05:33:01 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 307 : 25 - Starting VPN tunnel
+2020-07-07 05:33:02 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-07 05:33:03 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-07 05:33:03 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-07 05:33:03 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 185.159.157.42
+2020-07-07 05:33:06 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connected to: 185.159.157.42
+2020-07-07 05:33:06 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-07 05:33:09 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-07 05:33:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-07 05:33:36 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-18 09:26:17 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-18 09:26:17 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-18 09:26:17 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-07-18 09:26:17 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-18 09:26:17 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-18 09:26:17 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-18 09:26:17 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-18 09:26:17 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription (401); Internal response code: n/a;
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/refresh 
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/refresh (200); Internal response code: 1000;
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (401); Internal response code: n/a;
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (401); Internal response code: n/a;
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/refresh 
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/refresh 
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription (200); Internal response code: 1000;
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/refresh (200); Internal response code: 1000;
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/refresh (422); Internal response code: n/a;
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/status 
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans/default 
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-18 09:26:19 +0000 : ERROR : AlamofireWrapper.swift : didReceiveError(_:error:success:failure:) : 219 : 20 - Network request failed with error: Error Domain=ch.protonvpn.error Code=10013 "Invalid refresh token" UserInfo={NSLocalizedDescription=Invalid refresh token}
+2020-07-18 09:26:19 +0000 : ERROR : AccessRequestHelper.swift : fetchNewAccessToken(_:currentError:failure:) : 63 : 26 - User logged out due to refresh access token failure with error: Error Domain=ch.protonvpn.error Code=10013 "Invalid refresh token" UserInfo={NSLocalizedDescription=Invalid refresh token}
+2020-07-18 09:26:19 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/status (200); Internal response code: 1000;
+2020-07-18 09:26:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans/default (200); Internal response code: 1000;
+2020-07-18 09:26:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 (200); Internal response code: 1000;
+2020-07-18 09:26:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (401); Internal response code: n/a;
+2020-07-18 09:26:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/refresh 
+2020-07-18 09:26:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-18 09:26:20 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/refresh (422); Internal response code: n/a;
+2020-07-18 09:26:20 +0000 : ERROR : AlamofireWrapper.swift : didReceiveError(_:error:success:failure:) : 219 : 20 - Network request failed with error: Error Domain=ch.protonvpn.error Code=10013 "Invalid refresh token" UserInfo={NSLocalizedDescription=Invalid refresh token}
+2020-07-18 09:26:20 +0000 : ERROR : AccessRequestHelper.swift : fetchNewAccessToken(_:currentError:failure:) : 63 : 26 - User logged out due to refresh access token failure with error: Error Domain=ch.protonvpn.error Code=10013 "Invalid refresh token" UserInfo={NSLocalizedDescription=Invalid refresh token}
+2020-07-18 09:26:21 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-18 09:26:35 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth/info 
+2020-07-18 09:26:35 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth/info (200); Internal response code: 1000;
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: POST https://api.protonvpn.ch/auth 
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: POST https://api.protonvpn.ch/auth (200); Internal response code: 1000;
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription (200); Internal response code: 1000;
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (200); Internal response code: 1000;
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (200); Internal response code: 1000;
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/status 
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans/default 
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/status (200); Internal response code: 1000;
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 (200); Internal response code: 1000;
+2020-07-18 09:26:36 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans/default (200); Internal response code: 1000;
+2020-07-18 09:26:36 +0000 : ERROR : VpnKeychain.swift : fetch() : 66 : 16 - VPN credentials are missing from the keychain
+2020-07-18 09:26:37 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-18 09:26:38 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-18 09:26:38 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-18 09:26:45 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 159 : 17 - Connect started
+2020-07-18 09:26:45 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-18 09:26:45 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-18 09:26:45 +0000 : INFO : VpnManager.swift : connect(configuration:completion:) : 130 : 21 - About to start connection process
+2020-07-18 09:26:45 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 249 : 17 - Creating connection configuration
+2020-07-18 09:26:45 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:vpnManager:completion:) : 274 : 17 - Configuring connection
+2020-07-18 09:26:45 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 296 : 17 - Loading connection configuration
+2020-07-18 09:26:45 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 307 : 25 - Starting VPN tunnel
+2020-07-18 09:26:45 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 185.159.158.135
+2020-07-18 09:26:50 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connected to: 185.159.158.135
+2020-07-18 09:26:50 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-18 09:26:51 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-18 09:27:20 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-18 09:27:21 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-18 09:27:50 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-18 09:27:50 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-18 16:50:24 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-18 16:50:24 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-18 16:50:24 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-07-18 16:50:24 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-18 16:50:24 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-18 16:50:24 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-18 16:50:24 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-18 16:50:24 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 185.159.158.135
+2020-07-18 16:50:27 +0000 : INFO : VpnGateway.swift : stopConnecting(userInitiated:) : 263 : 17 - Connecting cancelled, userInitiated: true
+2020-07-18 16:50:27 +0000 : INFO : AppStateManager.swift : disconnect(completion:) : 168 : 17 - Disconnect started
+2020-07-18 16:50:27 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-18 16:50:27 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-18 16:50:27 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnecting from: 185.159.158.135
+2020-07-18 16:50:27 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-18 16:50:28 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription (200); Internal response code: 1000;
+2020-07-18 16:50:28 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/status 
+2020-07-18 16:50:28 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 
+2020-07-18 16:50:28 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans/default 
+2020-07-18 16:50:28 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-18 16:50:29 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/status (200); Internal response code: 1000;
+2020-07-18 16:50:29 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-18 16:50:29 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (200); Internal response code: 1000;
+2020-07-18 16:50:29 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-18 16:50:29 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 (200); Internal response code: 1000;
+2020-07-18 16:50:29 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (200); Internal response code: 1000;
+2020-07-18 16:50:29 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans/default (200); Internal response code: 1000;
+2020-07-18 16:50:30 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-18 16:50:30 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-18 16:50:30 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-19 19:18:56 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-19 19:18:56 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-19 19:18:56 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/subscription 
+2020-07-19 19:18:56 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/location 
+2020-07-19 19:18:56 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn 
+2020-07-19 19:18:56 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/sessions 
+2020-07-19 19:18:56 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/clientconfig 
+2020-07-19 19:18:56 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Disconnected
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/subscription (200); Internal response code: 1000;
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/status 
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/payments/plans/default 
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/clientconfig (200); Internal response code: 1000;
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/location (200); Internal response code: 1000;
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/status (200); Internal response code: 1000;
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X 
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn (200); Internal response code: 1000;
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/sessions (200); Internal response code: 1000;
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans?Currency=USD&Cycle=12 (200); Internal response code: 1000;
+2020-07-19 19:18:57 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/payments/plans/default (200); Internal response code: 1000;
+2020-07-19 19:18:58 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET https://api.protonvpn.ch/vpn/logicals?IP=X.X.X.X (200); Internal response code: 1000;
+2020-07-19 19:18:59 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 2
+2020-07-19 19:18:59 +0000 : INFO : ServerManager.swift : setupServers() : 118 : 17 - user's tier 3
+2020-07-19 19:19:00 +0000 : INFO : AppStateManager.swift : connect(withConfiguration:) : 159 : 17 - Connect started
+2020-07-19 19:19:00 +0000 : INFO : VpnManager.swift : startDisconnect(completion:) : 318 : 17 - Closing VPN tunnel
+2020-07-19 19:19:00 +0000 : INFO : VpnManager.swift : setOnDemand(_:completion:) : 356 : 21 - On Demand set: Off
+2020-07-19 19:19:00 +0000 : INFO : VpnManager.swift : connect(configuration:completion:) : 130 : 21 - About to start connection process
+2020-07-19 19:19:00 +0000 : INFO : VpnManager.swift : prepareConnection(forConfiguration:completion:) : 249 : 17 - Creating connection configuration
+2020-07-19 19:19:00 +0000 : INFO : VpnManager.swift : configureConnection(forProtocol:vpnManager:completion:) : 274 : 17 - Configuring connection
+2020-07-19 19:19:00 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 296 : 17 - Loading connection configuration
+2020-07-19 19:19:00 +0000 : INFO : VpnManager.swift : startConnection(completion:) : 307 : 25 - Starting VPN tunnel
+2020-07-19 19:19:00 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connecting to: 74.119.146.41
+2020-07-19 19:19:03 +0000 : INFO : VpnManager.swift : setState(withError:) : 397 : 32 - VPN state - Connected to: 74.119.146.41
+2020-07-19 19:19:03 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-19 19:19:03 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status (200); Internal response code: n/a;
+2020-07-19 19:19:33 +0000 : DEBUG : APILogger.swift : request(_:didCreateURLRequest:) : 30 : 16 - Request started: GET http://protonstatus.com/vpn_status 
+2020-07-19 19:19:33 +0000 : DEBUG : APILogger.swift : request(_:didParseResponse:) : 36 : 16 - Request finished: GET http://protonstatus.com/vpn_status; Internal response code: n/a;
