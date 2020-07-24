@@ -1,1 +1,1 @@
-COPYING
+blank.yml
