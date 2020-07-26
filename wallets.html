@@ -1,750 +1,470 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="A guide to creating and working with wallets in bcoin">
-	<meta name="author" content="Daniel McNally">
-
-	<title>Bcoin Guide | Wallets and Accounts and Keys, Oh My!</title>
-
-	<!-- Favicons -->
-	<!-- old
-	<link rel="shortcut icon" href="../assets/images/bcoin-ico.png">-->
-
-	<!-- generated from http://www.favicon-generator.org/ -->
-	<link rel="apple-touch-icon" sizes="57x57" href="../assets/images/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="../assets/images/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="../assets/images/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="../assets/images/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="../assets/images/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="../assets/images/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="../assets/images/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="../assets/images/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="../assets/images/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
-	<link rel="manifest" href="../assets/images/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="../assets/images/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
-
-	<!-- Web Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-
-	<!-- Bootstrap core CSS -->
-	<link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- Code Snippet CSS -->
-	<link href="../assets/css/prism.css" rel="stylesheet">
-
-	<link href="../assets/css/custom.css" rel="stylesheet">
-
-	<!-- Icon Fonts -->
-	<link href="../assets/css/font-awesome.min.css" rel="stylesheet">
-	<link href="../assets/css/simple-line-icons.css" rel="stylesheet">
-
-	<!-- Plugins -->
-	<link href="../assets/css/magnific-popup.css" rel="stylesheet">
-	<link href="../assets/css/owl.carousel.css" rel="stylesheet">
-	<link href="../assets/css/flexslider.css" rel="stylesheet">
-	<link href="../assets/css/animate.min.css" rel="stylesheet">
-
-	<!-- Template core CSS -->
-	<link href="../assets/css/vertical.min.css" rel="stylesheet">
-	<link href="../assets/css/template.css" rel="stylesheet">
-
-	<!-- Google Analytics Tracking -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-96446060-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-</head>
-<body>
-
-	<!-- PRELOADER -->
-	<div class="page-loader">
-		<div class="img-loader">Loading...
-			<!-- Bcoin logo in SVG -->
-			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				viewBox="0 0 200 56" style="enable-background:new 0 0 200 56;" xml:space="preserve">
-			<g id="XMLID_108_">
-				<g id="XMLID_123_">
-					<path id="XMLID_124_" d="M8.4,51.8H3.2V4.2h5.2v19.2h0.8c1.2-2,2.8-3.6,4.8-4.7c2-1.1,4.3-1.6,6.7-1.6c2,0,4,0.4,5.8,1.2
-						c1.8,0.8,3.4,1.9,4.8,3.3c1.4,1.5,2.5,3.2,3.3,5.4s1.2,4.6,1.2,7.3v1.4c0,2.8-0.4,5.2-1.2,7.4c-0.8,2.1-1.9,3.9-3.3,5.4
-						c-1.4,1.5-3,2.6-4.9,3.3s-3.8,1.1-5.9,1.1c-1.1,0-2.2-0.1-3.3-0.4c-1.1-0.3-2.2-0.6-3.2-1.2c-1-0.5-1.9-1.2-2.8-1.9
-						c-0.8-0.7-1.6-1.6-2.1-2.7H8.4V51.8z M19.4,47.7c1.6,0,3.1-0.3,4.4-0.9c1.3-0.6,2.5-1.4,3.5-2.4c1-1,1.8-2.3,2.3-3.8
-						c0.6-1.5,0.8-3.2,0.8-5v-1.4c0-1.8-0.3-3.5-0.8-4.9c-0.6-1.5-1.3-2.7-2.3-3.8c-1-1.1-2.2-1.9-3.5-2.5c-1.4-0.6-2.8-0.9-4.4-0.9
-						c-1.6,0-3,0.3-4.3,0.9c-1.3,0.6-2.5,1.5-3.5,2.6c-1,1.1-1.8,2.4-2.4,3.9c-0.6,1.5-0.9,3.2-0.9,5v0.8c0,1.9,0.3,3.6,0.9,5.1
-						c0.6,1.5,1.4,2.8,2.4,3.9s2.2,1.9,3.5,2.5C16.4,47.4,17.9,47.7,19.4,47.7z"/>
-				</g>
-				<g id="XMLID_120_">
-					<path id="XMLID_121_" d="M76.1,39.8c-0.4,1.9-1,3.6-1.8,5.2c-0.9,1.6-2,3-3.3,4.1s-2.9,2.1-4.7,2.7c-1.8,0.6-3.8,1-5.9,1
-						c-2.3,0-4.5-0.4-6.6-1.2c-2.1-0.8-3.9-1.9-5.4-3.4c-1.6-1.5-2.8-3.3-3.7-5.4c-0.9-2.1-1.4-4.6-1.4-7.4v-0.8c0-2.7,0.5-5.2,1.4-7.4
-						c0.9-2.2,2.1-4,3.7-5.5c1.6-1.5,3.4-2.7,5.4-3.5c2.1-0.8,4.3-1.2,6.6-1.2c2.1,0,4,0.3,5.8,1c1.8,0.6,3.3,1.5,4.7,2.7
-						c1.4,1.2,2.5,2.5,3.3,4.1c0.9,1.6,1.5,3.3,1.8,5.2l-5.2,1.2c-0.1-1.2-0.5-2.3-1-3.4c-0.5-1.1-1.2-2.1-2.1-2.9
-						c-0.9-0.8-1.9-1.5-3.2-2c-1.2-0.5-2.7-0.7-4.3-0.7c-1.6,0-3.1,0.3-4.5,0.9c-1.4,0.6-2.6,1.5-3.7,2.6c-1.1,1.1-1.9,2.4-2.5,4
-						c-0.6,1.5-0.9,3.2-0.9,5v0.8c0,1.9,0.3,3.6,0.9,5.1c0.6,1.5,1.4,2.8,2.5,3.8c1.1,1,2.3,1.8,3.7,2.4c1.4,0.6,3,0.9,4.6,0.9
-						s3.1-0.3,4.3-0.8c1.2-0.5,2.3-1.2,3.1-2c0.9-0.8,1.6-1.8,2.1-2.9c0.5-1.1,0.9-2.2,1-3.4L76.1,39.8z"/>
-				</g>
-				<g id="XMLID_116_">
-					<path id="XMLID_117_" d="M117.2,35.4c0,2.8-0.5,5.3-1.4,7.5c-0.9,2.2-2.1,4-3.6,5.4c-1.5,1.5-3.3,2.6-5.3,3.4
-						c-2,0.8-4.1,1.2-6.3,1.2c-2.2,0-4.3-0.4-6.3-1.2c-2-0.8-3.8-1.9-5.3-3.4c-1.5-1.5-2.7-3.3-3.6-5.4c-0.9-2.2-1.4-4.6-1.4-7.5v-0.8
-						c0-2.8,0.5-5.2,1.4-7.4c0.9-2.2,2.1-4,3.7-5.5c1.5-1.5,3.3-2.6,5.3-3.4c2-0.8,4.1-1.2,6.3-1.2c2.2,0,4.3,0.4,6.3,1.2
-						c2,0.8,3.8,1.9,5.3,3.4c1.5,1.5,2.8,3.3,3.7,5.5c0.9,2.2,1.4,4.6,1.4,7.4V35.4z M100.6,47.7c1.6,0,3.1-0.3,4.4-0.9
-						c1.4-0.6,2.5-1.4,3.6-2.5c1-1.1,1.8-2.4,2.4-3.9c0.6-1.5,0.9-3.2,0.9-5.1v-0.8c0-1.8-0.3-3.5-0.9-5c-0.6-1.5-1.4-2.8-2.4-3.9
-						c-1-1.1-2.2-1.9-3.6-2.6c-1.4-0.6-2.8-0.9-4.4-0.9c-1.6,0-3,0.3-4.4,0.9c-1.4,0.6-2.6,1.5-3.6,2.6c-1,1.1-1.8,2.4-2.4,3.9
-						c-0.6,1.5-0.9,3.2-0.9,5v0.8c0,1.9,0.3,3.6,0.9,5.1c0.6,1.5,1.4,2.8,2.4,3.9c1,1.1,2.2,1.9,3.6,2.5C97.5,47.5,99,47.7,100.6,47.7z
-						"/>
-				</g>
-				<g id="XMLID_112_">
-					<path id="XMLID_113_" d="M127.6,46.9h11.6V23h-10.4v-4.9h15.6v28.9h10.8v4.9h-27.6V46.9z M137.1,8c0-1.3,0.5-2.4,1.4-3.4
-						c0.9-0.9,2-1.4,3.3-1.4c1.3,0,2.4,0.5,3.3,1.4c0.9,0.9,1.4,2.1,1.4,3.4c0,1.3-0.5,2.4-1.4,3.4c-0.9,0.9-2,1.4-3.3,1.4
-						c-1.3,0-2.4-0.5-3.3-1.4C137.5,10.4,137.1,9.3,137.1,8z"/>
-				</g>
-				<g id="XMLID_109_">
-					<path id="XMLID_110_" d="M172.8,51.8h-5.2V18.1h5.2v5.7h0.8c2-4.4,5.6-6.7,10.7-6.7c3.8,0,6.9,1.2,9.1,3.6
-						c2.3,2.4,3.4,6.1,3.4,10.9v20.2h-5.2V32.8c0-3.5-0.8-6.2-2.3-8c-1.6-1.8-3.7-2.7-6.3-2.7c-3.2,0-5.6,1.1-7.4,3.3s-2.7,5.1-2.7,8.8
-						V51.8z"/>
-				</g>
-			</g>
-			</svg>
-
-
-		</div>
-	</div>
-	<!-- END PRELOADER -->
-
-	<!-- HEADER -->
-	<header class="header js-stick">
-			<div class="container">
-				<!-- YOUR LOGO HERE -->
-				<div class="inner-header">
-					<a class="inner-brand" href="../index.html">
-						<img class="brand-light" src="../assets/images/logo-light.png" width="100" alt="">
-						<img class="brand-dark" src="../assets/images/logo-dark.png" width="100" alt="">
-					</a>
-				</div>
-
-				<!-- OPEN MOBILE MENU -->
-				<div class="main-nav-toggle">
-					<div class="nav-icon-toggle" data-toggle="collapse" data-target="#custom-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</div>
-				</div>
-
-				<!-- WIDGETS MENU -->
-				<div class="inner-header pull-right hide-me">
-					<div class="menu-extras clearfix">
-
-						<!-- SLACK LINK -->
-						<div class="menu-item">
-							<div class="">
-								<a href="../slack-signup.html" target="_blank" id="" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="Join us on Slack!">
-									<img src="../assets/images/slack_icon.svg" width="18" height="18"/>
-									<span class=""></span>
-								</a>
-                            </div>
-						</div>
-
-						<!-- STACK EXCHANGE LINK -->
-						<div class="menu-item">
-							<div class="">
-								<a href="https://bitcoin.stackexchange.com/questions/tagged/bcoin" target="_blank" id="" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="Questions! Checkout Stack Exchange.">
-									<img src="../assets/images/stack-exchange-icon.svg" width="18" height="18"/>
-									<span class=""></span>
-								</a>
-                            </div>
-						</div>
-
-						<!-- GITHUB STUFF -->
-						<div class="menu-item">
-							<div class="">
-								<a href="https://github.com/bcoin-org/bcoin" target="_blank" id="" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="Visit bcoin on GitHub to see the code!">
-									<img src="../assets/images/github_icon.svg" width="18" height="18"/>
-									<span class=""></span>
-								</a>
-                            </div>
-						</div>
-
-						<div class="menu-item">
-                            <div class="ghbuttons">
-                                <a class="github-button" href="https://github.com/bcoin-org/bcoin" data-icon="octicon-star" data-count-href="/bcoin-org/bcoin/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star bcoin-org/bcoin on GitHub">Star</a>
-                                <a class="github-button" href="https://github.com/bcoin-org/bcoin/fork" data-icon="octicon-repo-forked" data-count-href="/bcoin-org/bcoin/network" data-show-count="true" data-count-aria-label="# forks on GitHub" aria-label="Fork bcoin-org/bcoin on GitHub">Fork</a>
-                            </div>
-                        </div>
-
-
-
-
-					</div>
-				</div>
-
-				<!-- MAIN MENU -->
-				<nav id="custom-collapse" class="main-nav collapse clearfix">
-					<ul class="inner-nav pull-right">
-
-						<!-- HOME -->
-						<li><a href="../index.html">Home</a></li>
-						<!-- END HOME -->
-
-						<!-- FEATURES -->
-						<li><a href="../index.html#features">What is Bcoin</a></li>
-						<!-- END FEATURES -->
-
-						<!-- GUIDES -->
-						<li><a href="../guides.html">Guides</a></li>
-						<!-- GUIDES -->
-
-						<!-- API REFERENCE - newer, how to interact once you're setup -->
-						<li><a href="../api-docs/index.html">API Docs</a></li>
-						<!-- END API -->
-
-						<!-- FULL DOCS - older, full reference
-						<li><a href="https://bcoin.io/docs/index.html">Docs</a></li> -->
-						<!-- END DOCS -->
-
-						<!-- DIVIDER
-						<li><a>&nbsp;</a></li>
-
-						<li><a href="#">All Demos</a></li>-->
-
-					</ul>
-				</nav>
-
-			</div>
-		</header>
-	<!-- END HEADER -->
-
-	<!-- WRAPPER -->
-	<div class="wrapper">
-
-		<!-- PAGE TITLE -->
-		<section class="module-sm bg-white-dark" data-background="../assets/images/bg-header.jpg">
-			<div class="container">
-
-				<div class="row">
-					<div class="col-sm-12 text-center">
-
-						<h2 class="montserrat text-uppercase m-b-10"><span class="text-highlight-black" style="line-height: 1.5;">&nbsp;Guides &nbsp;and &nbsp;Videos&nbsp;</span></h2>
-
-					</div>
-				</div>
-
-			</div>
-		</section>
-		<!-- END PAGE TITLE -->
-
-		<!-- GUIDES/TUTORIALS -->
-		<section class="module" style="padding-top:70px !important;">
-			<div class="container">
-
-				<div class="row">
-					<!-- START OF ARTICLE CONTAINER -->
-					<div class="col-sm-9 blog-content post-thumbnail">
-						<!-- POST IMAGE -->
-						<article class="post format-image">
-							<div class="row">
-								<!--<div class="col-sm-5">
-									<div class="post-preview">
-										<a href="#"><img src="../assets/images/guides/get-started.png" alt=""></a>
-									</div>
-								</div>-->
-
-								<!-- after re-enabling the above code, change the col-sm below to col-sm-7 -->
-								<div class="panel-group">
-									<div class="col-sm-12 panel panel-default">
-										<div class="post-content" style="color:#000;">
-					<!-- START OF GUIDE -->
-<h2 class="post-title panel-title" id="wallets-and-accounts-and-keys-oh-my!">Wallets and Accounts and Keys, Oh My!</h2><ul class="post-meta"><li class="author">By Daniel McNally</li></ul><p>Bcoin offers a powerful, modular way to create and manage bitcoin wallets. In this guide, I&#39;ll walk you through the concepts and features you&#39;ll need to know about to get started.</p>
-<h2 id="the-basics">The Basics</h2><p>If you&#39;re a seasoned bitcoiner, you can probably skim this section or skip straight ahead to the <a href="#examples">Examples</a> section. But if you&#39;re relatively new or just want a refresher, this section will help you understand how wallets actually work.</p>
-<h3 id="wallets">Wallets</h3><p>In the most basic sense, a bitcoin wallet is data that enables you to receive and spend bitcoins. Wallets come in <a href="https://www.coindesk.com/information/how-to-store-your-bitcoins/">many different types and designs</a>, and assessing all the options can be overwhelming. Fortunately, bcoin implements the latest specifications for structuring wallets that are easy to backup, easy to restore, and that work just as well for a bitcoin novice making their first transactions as for a business with millions of users depositing and withdrawing bitcoin.</p>
-<h4 id="keys-to-the-game">Keys to the Game</h4><p>If you want to transact with bitcoin, you&#39;ll need keys. Each bitcoin address is associated with a particular key, and wallets are made up of many different keys. Keys consist of both a private key and a public key. The private key is required for spending and is extremely sensitive information, while a public key can be used to receive bitcoins and monitor a particular address. If you want to learn more about how this works, read up on <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">Public-Key Cryptography</a>.</p>
-<h4 id="hd-vs-non-hd,-you-mean-like-tvs?">HD vs. Non-HD, you mean like TVs?</h4><p>You may have seen references to &quot;HD&quot; wallets and wondered what that means. HD in this context does not mean &quot;high definition,&quot; as I assumed it did at first, but rather &quot;hierarchical deterministic.&quot; An HD wallet takes a <em>hierarchy</em> of keys in order and makes it so any key in that sequence can be <em>determined</em> by the one before it. This means that if you can produce the first key in the hierarchy, you can then generate a practically unlimited number of subsequent keys. The specification for HD wallets as implemented in bcoin is defined by <a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki">Bitcoin Improvement Proposal (BIP) 32</a>.</p>
-<p>Non-HD wallets, on the other hand, contain keys that are unrelated to one another. Backing up such a wallet means each key must be preserved individually. Not only is this more cumbersome, but it means that backups can quickly become out of date as new keys are added to the wallet. With an HD wallet, as long as you hold on to the seed - the data needed to recreate the first key - you will be able to recover every other key.</p>
-<p>While bcoin uses HD wallets, it does allow you to import individual keys into a wallet. This can be a handy feature in certain cases, but it means you&#39;ll need to backup any imported keys separately as they will not be recoverable simply by using your seed.</p>
-<p>But what exactly is the seed for an HD wallet? It can come in several forms, but bcoin implements <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP39</a> which enables seeds to be represented by a mnemonic made up of a fixed set of common words. This means your seed can be easily spoken, written down, or perhaps even memorized. But be careful! Your seed can be used to recover and spend everything in your HD wallet (except for the aforementioned imported keys), so treat it like you would an actual wallet with cash in it.</p>
-<p>By default, mnemonics in bcoin are made up of twelve words representing 128 bits of entropy. This is a common standard that is far and away beyond what cutting edge computers can hope to crack via <a href="https://en.wikipedia.org/wiki/Brute-force_attack">brute force</a>. But if you want additional entropy, bcoin supports up to 512 bits of entropy which makes a 48 word mnemonic.</p>
-<h3 id="accounts">Accounts</h3><p>Wallets in bcoin are partitioned into accounts. When you first create a wallet, a &quot;default&quot; account is created automatically along with it. Accounts can be used to track and manage separate sets of keys all within a single wallet. For example, a business can use accounts to generate distinct addresses for depositors or to segregate customer funds internally.</p>
-<p>Bcoin implements <a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki">BIP44</a> as a method of generating unlimited accounts deterministically. This adds additional dimensions to the hierarchy described above, meaning the same seed that can recover all your keys can also recover all your addresses.</p>
-<p>Each account also comes with its own &quot;extended public key,&quot; a piece of data that can be used to generate all public keys for that account in deterministic fashion. This means, for instance, that a business can create limitless deposit addresses for its users without having to touch its critical private keys or seed. Remember that public keys can be used for receiving bitcoins, but not for spending, so a public key falling into the wrong hands will not immediately result in theft.</p>
-<h3 id="watch-only-wallets">Watch Only Wallets</h3><p>Speaking of not touching private keys, bcoin gives you the option to create wallets that are &quot;watch only.&quot; Watch only wallets don&#39;t contain <em>any</em> private keys, which means they can&#39;t be used to spend the bitcoins they receive. However, they work perfectly fine for creating addresses, receiving bitcoins, and detecting incoming transactions. Using watch only wallets where appropriate reduces the risk of your keys and bitcoin being stolen and is good security practice.</p>
-<p>Accounts always inherit the watch only behavior of their parent wallet. In other words, a watch only wallet will have exclusively watch only accounts while a regular wallet will have only regular accounts. Accordingly, you can&#39;t import private keys into a watch only wallet or public keys into regular wallets. If you try to mix and match watch only wallets and keys with bcoin, you&#39;re gonna have a bad time.</p>
-<pre class="snippet line-numbers language-bash "><code class="line-numbers language-bash">~$ curl http://127.0.0.1:18332/wallet/watchonlywallet/import -X POST -d <span class="token string">'{"account":"default"
-,"privateKey":"cNZfR3NhQ9oCP3pTjvPZETUuTW
-Zo2k6EXtfczvbWyv7FdjMhppvJ"}'</span>
-<span class="token punctuation">{</span>
-  <span class="token string">"error"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"type"</span><span class="token keyword">:</span> <span class="token string">"Error"</span>,
-    <span class="token string">"message"</span><span class="token keyword">:</span> <span class="token string">"Cannot import privkey into watch-only wallet."</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-~$ curl http://127.0.0.1:18332/wallet/privatekeywallet/import -X POST -d <span class="token string">'{"account":"default","publicKey":"02f4f200cb9391f8bbcc0a35e1f654b9b993b214a04ae7efd0313f4d4bf3d95745"}'</span><span class="token punctuation">{</span>
-  <span class="token string">"error"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"type"</span><span class="token keyword">:</span> <span class="token string">"Error"</span>,
-    <span class="token string">"message"</span><span class="token keyword">:</span> <span class="token string">"Cannot import pubkey into non watch-only wallet."</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><h3 id="api-authentication">API Authentication</h3><p>Bcoin can run as a server and allow you to interact with your wallets via a <a href="https://bcoin.io/api-docs/index.html?shell--curl#wallet">REST API</a>. It also allows you protect wallets from unauthenticated requests by running the server with the <code>wallet-auth</code> option. Each wallet you create has a <code>token</code> value that must be passed in with each request. Tokens, like accounts and keys, can also be deterministically generated using your HD seed. This means you can change the token on a wallet as often as you&#39;d like.</p>
-<h3 id="recovery">Recovery</h3><p>By using the HD standards mentioned above, bcoin allows one to easily restore or transfer their entire wallet to different wallet implementations. By providing just the mnemonic, one can fully recover their wallet to a fresh instance of bcoin or any other software that properly implements BIP33, BIP39, and BIP44, like the <a href="https://trezor.io/">Trezor</a> hardware wallet.</p>
-<h2 id="examples">Examples</h2><p>Enough chit chat, let&#39;s get down to business on how to create wallets, accounts, and keys with bcoin.</p>
-<h3 id="nodejs">Node.js</h3><p>Below is a demo using javascript to instantiate a wallet and output important data and keys. Since bcoin is modular, you can easily use just the wallet functionality as I&#39;ve done here.</p>
-<h4 id="setup">Setup</h4><p>With the <a href="https://www.npmjs.com/package/bcoin">bcoin package</a> installed, we&#39;ll first import bcoin and open a wallet database in memory.</p>
-<pre class="snippet line-numbers language-javascript "><code class="line-numbers language-javascript"><span class="token comment" spellcheck="true">//import the bcoin module and set it to testnet</span>
-<span class="token keyword">const</span> bcoin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'bcoin'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token string">'testnet'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> WalletDB <span class="token operator">=</span> bcoin<span class="token punctuation">.</span>WalletDB<span class="token punctuation">;</span>
-<span class="token keyword">const</span> WalletKey <span class="token operator">=</span> bcoin<span class="token punctuation">.</span>wallet<span class="token punctuation">.</span>WalletKey<span class="token punctuation">;</span>
-<span class="token keyword">const</span> KeyRing <span class="token operator">=</span> bcoin<span class="token punctuation">.</span>KeyRing<span class="token punctuation">;</span>
-<span class="token keyword">const</span> Mnemonic <span class="token operator">=</span> bcoin<span class="token punctuation">.</span>hd<span class="token punctuation">.</span>Mnemonic<span class="token punctuation">;</span>
-<span class="token keyword">const</span> HD <span class="token operator">=</span> bcoin<span class="token punctuation">.</span>hd<span class="token punctuation">;</span>
-
-<span class="token function">walletExample</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>error<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>console<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">walletExample</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//for demonstration purposes, we'll be creating a temporary wallet in memory</span>
-    <span class="token keyword">const</span> wdb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WalletDB</span><span class="token punctuation">(</span><span class="token punctuation">{</span> db<span class="token punctuation">:</span> <span class="token string">'memory'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">await</span> wdb<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><h4 id="creating-a-wallet">Creating a Wallet</h4><p>Creating a wallet in our database takes only one line.</p>
-<pre class="snippet line-numbers language-javascript "><code class="line-numbers language-javascript"><span class="token comment" spellcheck="true">//creates and returns a Wallet object from scratch using a random master key and default options</span>
-<span class="token keyword">const</span> wallet <span class="token operator">=</span> <span class="token keyword">await</span> wdb<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>wallet<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">/*{
-  wid: 2,
-  id: 'WLTdx4aYEPmmrQiYNwPop4nLtbpTEdJYwrN4',
-  network: 'testnet',
-  initialized: true,
-  accountDepth: 1,
-  token: 'eeae267e99d112793b892a8e30f89b1e1e0ba0d4984c2e6f09fc7931e750af5a', //the token you'll need to use the REST API with `wallet-auth` set to true
-  tokenDepth: 0,
-  state:
-   { wid: undefined,
-     id: undefined,
-     tx: 0,
-     coin: 0,
-     unconfirmed: 0,
-     confirmed: 0 },
-  master:
-   { encrypted: false,
-     key: { xprivkey: 'tprv8ZgxMBicQKsPdcD55gci7HBednWRaosU4CkAHNEAs3kAAj9m8TVrEzxAW3EPrTrFevVssHCCoRsA37vB65SUZs727k45Nz1Cjmy4tyaSFeR' }, //the keys to the castle, guard this carefully!
-     mnemonic:
-      { bits: 128,
-        language: 'english',
-        entropy: '04a50a56fbaaadc26a2b1690ec74243f',
-        phrase: 'again choose noble warrior print thrive post glare movie glove animal legal', //the keys to the castle in human readable form
-        passphrase: '' } },
-  account:
-   { wid: 2,
-     name: 'default',
-     network: &lt;Network: testnet>,
-     initialized: true,
-     witness: false,
-     watchOnly: false,
-     type: 'pubkeyhash',
-     m: 1,
-     n: 1,
-     accountIndex: 0,
-     receiveDepth: 1,
-     changeDepth: 1,
-     nestedDepth: 0,
-     lookahead: 10,
-     address: &lt;Address: type=pubkeyhash version=-1 str=mhNHETXFKDk7ZpGg3iEZb7guWZ2fbCuFjv>,
-     nestedAddress: null,
-     accountKey: 'tpubDDZ1r85SUsur87eW6uCrWancnCVHSLf5YcXzudCF6qBUQguR8upC6pgSuzxahDkf75SQ4LJ3R4x5NvfgQPmNjxhg2pcHzBCKcG2fBUQJ5U5', //the extended public key that can be used to generate receiving addresses for this account
-     keys: [] }
- }*/</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><h4 id="creating-accounts-and-receiving-addresses">Creating Accounts and Receiving Addresses</h4><p>You can start generating addresses with our first account right away.</p>
-<pre class="snippet line-numbers language-javascript "><code class="line-numbers language-javascript"><span class="token keyword">const</span> account <span class="token operator">=</span> <span class="token keyword">await</span> wallet<span class="token punctuation">.</span><span class="token function">getAccount</span><span class="token punctuation">(</span><span class="token string">'default'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">//now we have a wallet and default account, let's get our first and current receiving address</span>
-<span class="token keyword">const</span> addr <span class="token operator">=</span> account<span class="token punctuation">.</span><span class="token function">receiveAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//this will be the same value as seen in the 'address' property under 'account' in our wallet above</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>addr<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//mhNHETXFKDk7ZpGg3iEZb7guWZ2fbCuFjv</span>
-
-<span class="token comment" spellcheck="true">//we can skip ahead if we want, grabbing the hundredth key in the heirarchy like so</span>
-<span class="token keyword">const</span> key100 <span class="token operator">=</span> account<span class="token punctuation">.</span><span class="token function">deriveReceive</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//ok, technically this is the hundred-and-first key because the sequence is zero-based</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key100<span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//mjVdQqQYWBpE6YzKyMRd96LxCMoJyeTX2i</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><p>You can also create a second account with a custom name.</p>
-<pre class="snippet line-numbers language-javascript "><code class="line-numbers language-javascript"><span class="token comment" spellcheck="true">// let's create another account for hypothetical customer John Doe</span>
-<span class="token keyword">const</span> jdAccount <span class="token operator">=</span> <span class="token keyword">await</span> wallet<span class="token punctuation">.</span><span class="token function">createAccount</span><span class="token punctuation">(</span><span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">'john_doe'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>jdAccount<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">/*{
-  wid: 2,
-  name: '1',
-  network: &lt;Network: testnet>,
-  initialized: true,
-  witness: false,
-  watchOnly: false,
-  type: 'pubkeyhash',
-  m: 1,
-  n: 1,
-  accountIndex: 1,
-  receiveDepth: 1,
-  changeDepth: 1,
-  nestedDepth: 0,
-  lookahead: 10,
-  address: &lt;Address: type=pubkeyhash version=-1 str=muCSbWC6z1tAr2i1M5BKPWEZ8zapzcKfKh>,
-  nestedAddress: null,
-  accountKey: 'tpubDDZ1r85SUsur9txJF5ziLRD6757E1Q7x6VLfPby4YKqAdNwgmrkXBNDzMowxYJVoAizd7CCLHELY5X2HYzh6YurbH9vMyQJN
-T92n87z22yX',
-  keys: []
-}*/</span>
-
-<span class="token comment" spellcheck="true">//Mr. Doe wants to make 10 deposits, let's get him a unique address for each one</span>
-<span class="token keyword">const</span> depositAddressesToPrint <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>depositAddressesToPrint<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>jdAccount<span class="token punctuation">.</span><span class="token function">deriveReceive</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">/*
-muCSbWC6z1tAr2i1M5BKPWEZ8zapzcKfKh
-n4TWmQyPQ8mAr2oEfbBzKF8Dw6LXXBidYJ
-ms1jRu71BvEsJ4K3dMFrKFUnB8axZQdmSq
-mn8xFgB68RjWGdKPVb8Up4P4v5MyqPoEQj
-mzfXXKRXJBjTGRFrrg4wm1XPsdU9TLoN6T
-n36TShvFCDaWgCMHHszUGiczA7Tcru4AQp
-mnZBaquULuUhtwwxKTuxWNF7ZDMDNxScJd
-mfpwjevu3FY4ZsWPd31J9oBH1qrxZLF1tH
-mhTrDspHReXThUmMeo8dVJHqhkyHG8VPZ1
-mxKo27kJpNazq9Q3cQ7458k2S2vcQar9Pd
-*/</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><h4 id="getting-private-keys">Getting Private Keys</h4><p>Bcoin handles your private keys automatically for things like sending transactions and signing messages, but you can also manually extract private keys from a wallet.</p>
-<pre class="snippet line-numbers language-javascript "><code class="line-numbers language-javascript"><span class="token comment" spellcheck="true">//the keys above are only good for receiving bitcoins, not spending them</span>
-<span class="token comment" spellcheck="true">//let's get the extended private key for John Doe's account, which can be used to generate every private key for the account</span>
-<span class="token keyword">const</span> jdExtendedPrivateKey <span class="token operator">=</span> wallet<span class="token punctuation">.</span>master<span class="token punctuation">.</span>key<span class="token punctuation">.</span><span class="token function">deriveAccount</span><span class="token punctuation">(</span><span class="token number">44</span><span class="token punctuation">,</span> jdAccount<span class="token punctuation">.</span>network<span class="token punctuation">.</span>keyPrefix<span class="token punctuation">.</span>coinType<span class="token punctuation">,</span> jdAccount<span class="token punctuation">.</span>accountIndex<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//44 is the fixed purpose for bip44 accounts</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>jdExtendedPrivateKey<span class="token punctuation">.</span><span class="token function">xprivkey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//tprv8gryhi3CLWEBGRvWMSL7w1YyY3bHr4w3XBjt75vm842mntgv9Tvvzsc8Bf3NZt13ydD5QZaJVShMudE33egMhSLnEM41t5UUhRj5wA5u8Sc</span>
-
-<span class="token comment" spellcheck="true">//for good measure, let's get the private key for John's first receiving address</span>
-<span class="token keyword">const</span> branch <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//the branch for receiving addresses</span>
-<span class="token keyword">const</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//index of 0 means the first key among the receiving addresses</span>
-<span class="token keyword">const</span> jdPrivateKey0 <span class="token operator">=</span> jdExtendedPrivateKey<span class="token punctuation">.</span><span class="token function">derive</span><span class="token punctuation">(</span>branch<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">derive</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> jdWalletKey0 <span class="token operator">=</span> WalletKey<span class="token punctuation">.</span><span class="token function">fromHD</span><span class="token punctuation">(</span>jdAccount<span class="token punctuation">,</span> jdPrivateKey0<span class="token punctuation">,</span> branch<span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//the private key below can be imported into almost any bitcoin wallet, HD or non-HD, and used to spend coins from the corresponding address</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>jdWalletKey0<span class="token punctuation">.</span><span class="token function">getPrivateKey</span><span class="token punctuation">(</span><span class="token string">'base58'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//cNZfR3NhQ9oCP3pTjvPZETUuTWZo2k6EXtfczvbWyv7FdjMhppvJ</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><h4 id="using-an-hd-path">Using an HD path</h4><p>Sometimes it is handy to work with an HD path. This is an object that contains information on a particular path to a key in the tree hierarchy of the wallet. In particular, a path knows the account, the branch and the index of the relevant key. This is according to <a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki">BIP44</a>, which specifies that every account gets its own subtree of keys. According to BIP44, an account has two children (known as branches): the first for receiveing addresses and the second for change addresses. Here in bcoin, there is also a third branch, for nested segwit addresses. (bcoin does not implement BIPS <a href="https://github.com/bitcoin/bips/blob/master/bip-0049.mediawiki">49</a> and <a href="https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki">84</a> yet.) These three branches can in turn have as many children as needed. These correspond to the aforementioned index and provide the actual keys that are used for transactions.</p>
-<pre class="snippet line-numbers language-javascript "><code class="line-numbers language-javascript"><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token keyword">await</span> wdb<span class="token punctuation">.</span><span class="token function">getPath</span><span class="token punctuation">(</span>wallet<span class="token punctuation">.</span>wid<span class="token punctuation">,</span> jdAccount<span class="token punctuation">.</span><span class="token function">receiveKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHash</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">// Let's skip 30 indexes</span>
-path<span class="token punctuation">.</span>index <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">30</span>
-
-<span class="token comment" spellcheck="true">// Get the corresponding keyring:</span>
-<span class="token keyword">const</span> jdKey <span class="token operator">=</span> jdAccount<span class="token punctuation">.</span>accountKey<span class="token punctuation">.</span><span class="token function">derive</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>branch<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">derive</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span>index<span class="token punctuation">)</span>
-<span class="token keyword">const</span> keyring <span class="token operator">=</span> WalletKey<span class="token punctuation">.</span><span class="token function">fromHD</span><span class="token punctuation">(</span>jdAccount<span class="token punctuation">,</span> jdKey<span class="token punctuation">,</span> path<span class="token punctuation">.</span>branch<span class="token punctuation">,</span> path<span class="token punctuation">.</span>index<span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">// Warning: if any coins are paid to the address of the generated keyring above,</span>
-<span class="token comment" spellcheck="true">// the wallet won't notice until 20 more receive keys are generated. This is</span>
-<span class="token comment" spellcheck="true">// because by default wallets look for received coins in the addresses that</span>
-<span class="token comment" spellcheck="true">// correspond to the next 10 indexes. You may actually use this as a trick to</span>
-<span class="token comment" spellcheck="true">// hide some money from yourself, only to see them again after receiving several</span>
-<span class="token comment" spellcheck="true">// transactions. Surprise money!</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>keyring<span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">/*
-HDPublicKey {
-  depth: 5,
-  parentFingerPrint: 3443512669,
-  childIndex: 30,
-  chainCode:
-   &lt;Buffer 92 74 63 8e a1 37 4f 76 c3 45 b3 72 a9 f9 6e 3f 6f e8 91 21 ea b7 2f aa d1 14 3b 03 4a 28 88 ec>,
-  publicKey:
-   &lt;Buffer 02 7e 0a 71 6f ee 92 03 7e 13 4f af d0 b8 41 34 1c 2c e7 7b 31 dc 59 69 84 6a 81 fc 58 57 24 1c 40>,
-  fingerPrint: -1 } { name: 'john_doe',
-  account: 1,
-  branch: 0,
-  index: 30,
-  witness: false,
-  nested: false,
-  publicKey:
-   '027e0a716fee92037e134fafd0b841341c2ce77b31dc5969846a81fc5857241c40',
-  script: null,
-  program: null,
-  type: 'pubkeyhash',
-  address: 'n3ymqyMsqLjhyzZUqkRtGjyvRxVvhHU7q8' }
-*/</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><p>An HD path is a powerful tool that allows you to manually traverse the HD wallet tree with ease. But be warned, there&#39;s a lot into HD wallets, so be sure you understand what you&#39;re doing. With great power comes great responsibility!</p>
-<h4 id="generating-mnemonics-and-recovering-keys">Generating Mnemonics and Recovering Keys</h4><p>Finally, you can create mnemonics manually and seed new wallets with them. And if you need to generate keys from a mnemonic you provide - either by recreating a wallet or by extracting specific keys - you can do that as well.</p>
-<pre class="snippet line-numbers language-javascript "><code class="line-numbers language-javascript"><span class="token comment" spellcheck="true">//can we generate a mnemonic with twice as many bits of entropy to future proof against brute force attacks from the next millenium? sure we can.</span>
-<span class="token keyword">const</span> mnemonic24 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Mnemonic</span><span class="token punctuation">(</span><span class="token punctuation">{</span>bits<span class="token punctuation">:</span> <span class="token number">256</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>mnemonic24<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//page unknown ladder thunder airport merry run ball inject clinic danger valley equip consider normal twist casual duck essay almost trade regular two segment</span>
-
-<span class="token comment" spellcheck="true">//what if we need to recover the wallet we've created above? no problem.</span>
-<span class="token keyword">const</span> mnemonic <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Mnemonic</span><span class="token punctuation">(</span><span class="token string">'again choose noble warrior print thrive post glare movie glove animal legal'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> masterKey <span class="token operator">=</span> HD<span class="token punctuation">.</span><span class="token function">fromMnemonic</span><span class="token punctuation">(</span>mnemonic<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//this wallet will generate all the same accounts, keys, addresses, and tokens if swapped in for the 'wallet' variable in examples above</span>
-<span class="token keyword">const</span> recoveredWallet <span class="token operator">=</span> <span class="token keyword">await</span> wdb<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>master<span class="token punctuation">:</span> masterKey<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">//we can also recover only the keys for John Doe's first receiving address without recreating the wallet or account</span>
-<span class="token comment" spellcheck="true">//this time we'll skip instantiating the account and use the BIP44 path for the second account, first branch, and first index on bitcoin testnet</span>
-<span class="token keyword">const</span> jdRecoveredPrivateKey <span class="token operator">=</span> masterKey<span class="token punctuation">.</span><span class="token function">derivePath</span><span class="token punctuation">(</span><span class="token string">"m/44'/1'/1'/0/0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> jdKeyRing <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">KeyRing</span><span class="token punctuation">(</span>jdRecoveredPrivateKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//our output should be the same as what we logged to the console earlier in this example</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>jdKeyRing<span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//muCSbWC6z1tAr2i1M5BKPWEZ8zapzcKfKh</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>jdKeyRing<span class="token punctuation">.</span><span class="token function">getPrivateKey</span><span class="token punctuation">(</span><span class="token string">'base58'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//cNZfR3NhQ9oCP3pTjvPZETUuTWZo2k6EXtfczvbWyv7FdjMhppvJ</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><h3 id="command-line-examples-against-a-local-bcoin-server">Command Line Examples against a Local bcoin Server</h3><p>If you already have bcoin <a href="https://github.com/bcoin-org/bcoin/wiki/Beginner&#39;s-Guide">set up as a full node</a>, you can use the command line to create wallets and demonstrate some of the topics I discussed in this guide. My examples below are against a running testnet bcoin instance with <code>wallet-auth</code> set to true.</p>
-<pre class="snippet line-numbers language-bash "><code class="line-numbers language-bash">~$ bcoin wallet create guide1
-<span class="token punctuation">{</span>
-  <span class="token string">"network"</span><span class="token keyword">:</span> <span class="token string">"testnet"</span>,
-  <span class="token string">"wid"</span><span class="token keyword">:</span> 2,
-  <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"guide1"</span>,
-  <span class="token string">"initialized"</span><span class="token keyword">:</span> true,
-  <span class="token string">"watchOnly"</span><span class="token keyword">:</span> false,
-  <span class="token string">"accountDepth"</span><span class="token keyword">:</span> 1,
-  <span class="token string">"token"</span><span class="token keyword">:</span> <span class="token string">"c88bc2fda2f265bc00c8fd28771c62695dbbddfd05ef2510f9e0afbec14818ba"</span>,
-  <span class="token string">"tokenDepth"</span><span class="token keyword">:</span> 0,
-  <span class="token string">"state"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"tx"</span><span class="token keyword">:</span> 0,
-    <span class="token string">"coin"</span><span class="token keyword">:</span> 0,
-    <span class="token string">"unconfirmed"</span><span class="token keyword">:</span> 0,
-    <span class="token string">"confirmed"</span><span class="token keyword">:</span> 0
-  <span class="token punctuation">}</span>,
-  <span class="token string">"master"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"encrypted"</span><span class="token keyword">:</span> <span class="token boolean">false</span>
-  <span class="token punctuation">}</span>,
-  <span class="token string">"account"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"default"</span>,
-    <span class="token string">"initialized"</span><span class="token keyword">:</span> true,
-    <span class="token string">"witness"</span><span class="token keyword">:</span> false,
-    <span class="token string">"watchOnly"</span><span class="token keyword">:</span> false,
-    <span class="token string">"type"</span><span class="token keyword">:</span> <span class="token string">"pubkeyhash"</span>,
-    <span class="token string">"m"</span><span class="token keyword">:</span> 1,
-    <span class="token string">"n"</span><span class="token keyword">:</span> 1,
-    <span class="token string">"accountIndex"</span><span class="token keyword">:</span> 0,
-    <span class="token string">"receiveDepth"</span><span class="token keyword">:</span> 1,
-    <span class="token string">"changeDepth"</span><span class="token keyword">:</span> 1,
-    <span class="token string">"nestedDepth"</span><span class="token keyword">:</span> 0,
-    <span class="token string">"lookahead"</span><span class="token keyword">:</span> 10,
-    <span class="token string">"receiveAddress"</span><span class="token keyword">:</span> <span class="token string">"mirZQBLNFsjgxRC6STfCJU71nXqSon9U17"</span>,
-    <span class="token string">"nestedAddress"</span><span class="token keyword">:</span> null,
-    <span class="token string">"changeAddress"</span><span class="token keyword">:</span> <span class="token string">"n3qdAvsVk7v4q4CAp25SSPsfcBARJexSUr"</span>,
-    <span class="token string">"accountKey"</span><span class="token keyword">:</span> <span class="token string">"tpubDCsPHK6xw9CziuN6o7tk1rubLopp5ipy4rDsapkA12KYdcuLXNH7frWUcWsMiFjU5Jxqp2d37SidfmvAahsLqon14wXtor7uQvjLZscb2fh"</span>,
-    <span class="token string">"keys"</span><span class="token keyword">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><h4 id="auth-tokens">Auth Tokens</h4><p>See that <code>token</code>? We&#39;ll be needing that. With the token, we can do things like query our wallet balance.</p>
-<pre class="snippet line-numbers language-bash "><code class="line-numbers language-bash">~$ bcoin wallet balance --id guide1 --token c88bc2fda2f265bc00c8fd28771c62695d
-bbddfd05ef2510f9e0afbec14818ba
-<span class="token punctuation">{</span>
-  <span class="token string">"wid"</span><span class="token keyword">:</span> 2,
-  <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"guide1"</span>,
-  <span class="token string">"account"</span><span class="token keyword">:</span> -1,
-  <span class="token string">"unconfirmed"</span><span class="token keyword">:</span> 0,
-  <span class="token string">"confirmed"</span><span class="token keyword">:</span> 0
-<span class="token punctuation">}</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><p>Without it, we get a 403 Forbidden error.</p>
-<pre class="snippet line-numbers language-bash "><code class="line-numbers language-bash">~$ bcoin wallet balance --id guide1Error: Status code: 403.
-    at HTTPClient._request <span class="token punctuation">(</span>/opt/bitnami/nodejs/lib/node_modules/bcoin/lib/http/client.js:229:11<span class="token punctuation">)</span>
-    at process._tickCallback <span class="token punctuation">(</span>internal/process/next_tick.js:109:7<span class="token punctuation">)</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><p>However, we can change our token for this wallet as often as we&#39;d like. In a production-like setting, you&#39;d probably want to encrypt the wallet with a passphrase which would also be required for the <code>retoken</code> call below.</p>
-<pre class="snippet line-numbers language-bash "><code class="line-numbers language-bash">~$ bcoin wallet retoken --id guide1 --token c88bc2fda2f265bc00c8fd28771c62695dbbddfd05ef2510f9e0afbec14818ba
-26ea429fe1c0da8505c9b0e61a46343d802779d73393ee72130df0fb1a9eaa7e</code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><h4 id="creating-an-account">Creating an Account</h4><p>With our new token, let&#39;s create an account for John Doe&#39;s sister, Jane.</p>
-<pre class="snippet line-numbers language-bash "><code class="line-numbers language-bash">~$ bcoin wallet --id guide1 account create jane_doe --token 26ea429fe1c0da8505c9b0e61a46343d802779d73393ee72130df0fb1a9eaa7e
-<span class="token punctuation">{</span>
-  <span class="token string">"wid"</span><span class="token keyword">:</span> 2,
-  <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"guide1"</span>,
-  <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"jane_doe"</span>,
-  <span class="token string">"initialized"</span><span class="token keyword">:</span> true,
-  <span class="token string">"witness"</span><span class="token keyword">:</span> false,
-  <span class="token string">"watchOnly"</span><span class="token keyword">:</span> false,
-  <span class="token string">"type"</span><span class="token keyword">:</span> <span class="token string">"pubkeyhash"</span>,
-  <span class="token string">"m"</span><span class="token keyword">:</span> 1,
-  <span class="token string">"n"</span><span class="token keyword">:</span> 1,
-  <span class="token string">"accountIndex"</span><span class="token keyword">:</span> 1,
-  <span class="token string">"receiveDepth"</span><span class="token keyword">:</span> 1,
-  <span class="token string">"changeDepth"</span><span class="token keyword">:</span> 1,
-  <span class="token string">"nestedDepth"</span><span class="token keyword">:</span> 0,
-  <span class="token string">"lookahead"</span><span class="token keyword">:</span> 10,
-  <span class="token string">"receiveAddress"</span><span class="token keyword">:</span> <span class="token string">"n4RwFEkSV7MSxBqqvNziakuGgeS8XFusKq"</span>,
-  <span class="token string">"nestedAddress"</span><span class="token keyword">:</span> null,
-  <span class="token string">"changeAddress"</span><span class="token keyword">:</span> <span class="token string">"mfaHH8ESM8pzoR1wLSSRQS89kpaBi9dBVt"</span>,
-  <span class="token string">"accountKey"</span><span class="token keyword">:</span> <span class="token string">"tpubDCsPHK6xw9CzjZQMnqwoZjLjMHqbkWjNYakAatZ9ktAf6Lou2H7jw2h93x24zT86BadMMmCAsp69yuUjBsGgHkfC41TpgXMPzSZRFxu3Ghi"</span>,
-  <span class="token string">"keys"</span><span class="token keyword">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-<span class="token punctuation">}</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><p>We already have the first receiving address for Jane in <code>receiveAddress</code> above, but let&#39;s get one more for good measure.</p>
-<pre class="snippet line-numbers language-bash "><code class="line-numbers language-bash">~$ bcoin wallet --id guide1 address --account jane_doe --token 26ea429fe1c0da8505c9b0e61a46343d802779d73393ee72130df0fb1a9eaa7e
-<span class="token punctuation">{</span>
-  <span class="token string">"network"</span><span class="token keyword">:</span> <span class="token string">"testnet"</span>,
-  <span class="token string">"wid"</span><span class="token keyword">:</span> 2,
-  <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"guide1"</span>,
-  <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"jane_doe"</span>,
-  <span class="token string">"account"</span><span class="token keyword">:</span> 1,
-  <span class="token string">"branch"</span><span class="token keyword">:</span> 0,
-  <span class="token string">"index"</span><span class="token keyword">:</span> 1,
-  <span class="token string">"witness"</span><span class="token keyword">:</span> false,
-  <span class="token string">"nested"</span><span class="token keyword">:</span> false,
-  <span class="token string">"publicKey"</span><span class="token keyword">:</span> <span class="token string">"02dda1237f65e26d05451fb96b15e85c3fb5c420ebdfcf31835857c38daa8ef5d6"</span>,
-  <span class="token string">"script"</span><span class="token keyword">:</span> null,
-  <span class="token string">"program"</span><span class="token keyword">:</span> null,
-  <span class="token string">"type"</span><span class="token keyword">:</span> <span class="token string">"pubkeyhash"</span>,
-  <span class="token string">"address"</span><span class="token keyword">:</span> <span class="token string">"mqDhGEywrWDm5DHw71Qxm5U8Lc6WvhZVeM"</span>
-<span class="token punctuation">}</span></code><button class="copy-button"><img src="../assets/images/clippy.svg" alt="Copy to clipboard"></button></pre><h2 id="conclusion">Conclusion</h2><p>After reading this guide, you should have a decent understanding of not only the concepts behind bitcoin wallets, but also of how to go about creating and managing them with bcoin. Now you can integrate bcoin&#39;s wallet functionality directly into your application, or run bcoin as a full node and interact with it for your wallet creation needs. Good luck!</p>
-
-
-					<!-- END OF GUIDE -->
-									</div>
-								</div>
-							</div>
-						</div>
-					</article>
-					<!-- END OF ARTICLE CONTAINER -->
-
-					</div>
-					<!-- END BLOG CONTENT -->
-
-					<!-- START SIDEBAR -->
-<div class="col-sm-3 sidebar">
-  <!-- TEXT WIDGET -->
-  <div class="widget">
-    <h6 class="montserrat text-uppercase bottom-line">Installation</h6>
-      <p>
-        <a href="https://github.com/bcoin-org/bcoin/blob/master/docs/getting-started.md">
-          See the "Getting Started" guide in the repository documents directory.
-        </a>
-      </p>
-  </div>
-  <!-- END TEXT WIDGET -->
-
-  <!-- CATEGORIES WIDGET -->
-<div class="widget guide-list">
-<h6 class="montserrat text-uppercase bottom-line">Guides</h6>
-<ul class="icons-list">
-<!-- GUIDES-LIST -->
-<li><a href="working-with-txs.html">Working with transactions</a></li>
-<li><a href="webapp.html">Building web applications with the bcoin library</a></li>
-<li><a href="wallets.html">Wallets and Accounts and Keys, Oh My!</a></li>
-<li><a href="swaps.html">Cross-Chain Atomic Swaps</a></li>
-<li><a href="segwit.html">Segwit and Bcoin</a></li>
-<li><a href="scripting.html">Intro to Scripting</a></li>
-<li><a href="op_return.html">Store Data on the Blockchain</a></li>
-<li><a href="multisig-tx.html">Creating Multisignature Transactions</a></li>
-<li><a href="multisig-cli.html">Multisig on the command line</a></li>
-<li><a href="generate-address.html">Generate an Address</a></li>
-<li><a href="events.html">Events and Sockets</a></li>
-<li><a href="crowdfund-tx.html">Create a Crowdfunding Transaction</a></li>
-<li><a href="connect-local-nodes.html">Connect two local nodes</a></li>
-<li><a href="cltv.html">Time Locked Bitcoin Transactions w/ CLTV</a></li>
-<li><a href="building-plugins.html">Building Awesome bcoin Plugins</a></li>
-<li><a href="browser.html">Run a bcoin full node in a web browser</a></li>
-<li><a href="bcoin-clock.html">Make your own Bcoin Block Clock!</a></li>
-<!-- /GUIDES-LIST -->
-</ul>
-</div>
-  <!-- END CATEGORIES WIDGET -->
-
-  <!-- TEXT WIDGET -->
-  <div class="widget">
-    <h6 class="montserrat text-uppercase bottom-line">Looking for Docs?</h6>
-    <p>Checkout our <a href="../api-docs/index.html">API Docs</a> or the <a href="https://bcoin.io/docs/index.html">Full Documentation</a></p>
-  </div>
-  <!-- END TEXT WIDGET -->
-
-  <!-- TEXT WIDGET -->
-  <div class="widget">
-    <h6 class="montserrat text-uppercase bottom-line">Get Involved</h6>
-    <p>If you think you've got what it takes to make your own bcoin guides and tutorials, head on over to our <a href="https://github.com/bcoin-org/bcoin-org.github.io">GitHub repo</a> to see how you can make a request or contribute your own and earn bounties! You can also reach out to us on <a href="../slack-signup.html"> Slack.</a></p>
-    <p>Want to join the team?<a href="https://angel.co/purse/jobs/90956-bitcoin-protocol-engineer-bcoin"> We’re hiring.</a></p>
-  </div>
-  <!-- END TEXT WIDGET -->
-</div>
-
-					<!-- END SIDEBAR -->
-
-				</div><!-- .row -->
-
-			</div>
-		</section>
-		<!-- END NEW BLOGS -->
-
-				</div><!-- .row -->
-
-			</div>
-		</section>
-		<!-- END BLOGS -->
-
-
-		<!-- PARALLAX DOCS CTA -->
-		<section class="module bg-white-alfa-30 parallax color-white" data-background="../assets/images/bg-header.jpg">
-			<div class="container">
-
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="text-center">
-							<h2 class="montserrat text-uppercase m-b-30">Ready to start building? Read the docs!</h2>
-							<a href="https://bcoin.io/docs/index.html" target="_blank" class="btn btn-lg btn-purple">Documentation</a>
-						</div>
-					</div>
-				</div><!-- .row -->
-
-			</div>
-		</section>
-		<!-- END PARALLAX DOCS CTA -->
-
-		<!-- FOOTER -->
-		<footer id="footer" class="footer-minimal">
-			<div class="container">
-
-				<div class="row">
-					<div class="col-sm-12">
-						<ul class="social-icons social-icons-circle text-center m-b-35">
-							<li><a href="https://twitter.com/bcoin"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="https://github.com/bcoin-org/bcoin"><i class="fa fa-github"></i></a></li>
-
-
-							<li><a href="../slack-signup.html" target="_blank"><i class="fa fa-slack"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12 text-center m-b-35">
-						<img class="m-b-35 QR-code" src="../assets/images/donation_QR.png"/>
-						<p class="m-0"><strong>Bcoin Development Donation Address:</strong><br />3Bi9H1hzCHWJoFEjc4xzVzEMywi35dyvsV</p>
-
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12 text-center">
-						<p class="m-0">Copyright <a href="#">bcoin.io, Purse</a>, 2018, All Rights Reserved.</p>
-
-					</div>
-				</div>
-
-			</div>
-		</footer>
-		<!-- END FOOTER -->
-
-	</div>
-	<!-- /WRAPPER -->
-
-	<!-- JAVASCRIPT FILES -->
-
-	<script src="../assets/js/jquery-2.2.3.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
-	<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-	<script src="../assets/js/plugins.min.js"></script>
-	<script src="../assets/js/stickyfill.min.js"></script>
-	<script src="../assets/js/custom.min.js"></script>
-	<script src="../assets/js/clipboard.min.js"></script>
-	<script async defer src="../assets/js/prism.js"></script>
-	<script>
-		var copyCode = new Clipboard('.copy-button', {
-		    target: function(trigger) {
-		        return trigger.previousElementSibling;
-		    }
-		});
-
-		copyCode.on('success', function(event) {
-		    event.trigger.classList.add('success');
-		    event.clearSelection();
-		    // event.trigger.textContent = 'Copied!';
-		    window.setTimeout(function() {
-		        event.trigger.classList.remove('success');
-		    }, 2000);
-		});
-	</script>
-
-  <!-- github button js -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-</body>
-</html>
+# Standard Libraries
+import os
+import sys
+import configparser
+import time
+import json
+import subprocess
+import re
+import fileinput
+import getpass
+import random
+# External Libraries
+import requests
+# ProtonVPN-CLI functions
+from .logger import logger
+# Constants
+from .constants import (
+    USER, CONFIG_FILE, SERVER_INFO_FILE, TEMPLATE_FILE, SPLIT_TUNNEL_FILE,
+    VERSION
+)
+
+
+def call_api(url, json_format=True):
+    """Call to the ProtonMail API at https://api.protonmail.ch."""
+    headers = {
+        "x-pm-appversion": "Other",
+        "x-pm-apiversion": "3",
+        "Accept": "application/vnd.protonmail.v1+json"
+    }
+
+    logger.debug("Initiating API Call: {0}".format(url))
+
+    try:
+        response = requests.get(url, headers=headers)
+    except (requests.exceptions.ConnectionError,
+            requests.exceptions.ConnectTimeout):
+        print(
+            "[!] There was an error connecting to the ProtonMail API.\n"
+            "[!] Please make sure your connection is working properly!"
+        )
+        logger.debug("Error connecting to ProtonMail API")
+        sys.exit(1)
+    try:
+        response.raise_for_status()
+    except requests.exceptions.HTTPError:
+        print(
+            "[!] There was an error with accessing the ProtonMail API.\n"
+            "[!] Please make sure your connection is working properly!\n"
+            "[!] HTTP Error Code: {0}".format(response.status_code)
+        )
+        logger.debug("Bad Return Code: {0}".format(response.status_code))
+        sys.exit(1)
+
+    if json_format:
+        logger.debug("Successful json response")
+        return response.json()
+    else:
+        logger.debug("Successful non-json response")
+        return response
+
+
+def pull_server_data(force=False):
+    """Pull current server data from the ProtonMail API."""
+    config = configparser.ConfigParser()
+    config.read(CONFIG_FILE)
+
+    if not force:
+        # Check if last server pull happened within the last 15 min (900 sec)
+        if int(time.time()) - int(config["metadata"]["last_api_pull"]) <= 900:
+            logger.debug("Last server pull within 15mins")
+            return
+
+    data = call_api("https://api.protonmail.ch/vpn/logicals")
+
+    with open(SERVER_INFO_FILE, "w") as f:
+        json.dump(data, f)
+        logger.debug("SERVER_INFO_FILE written")
+
+    change_file_owner(SERVER_INFO_FILE)
+    config["metadata"]["last_api_pull"] = str(int(time.time()))
+
+    with open(CONFIG_FILE, "w+") as f:
+        config.write(f)
+        logger.debug("last_api_call updated")
+
+
+def get_servers():
+    """Return a list of all servers for the users Tier."""
+
+    with open(SERVER_INFO_FILE, "r") as f:
+        logger.debug("Reading servers from file")
+        server_data = json.load(f)
+
+    servers = server_data["LogicalServers"]
+
+    user_tier = int(get_config_value("USER", "tier"))
+
+    # Sort server IDs by Tier
+    return [server for server in servers if server["Tier"] <= user_tier and server["Status"] == 1] # noqa
+
+
+def get_server_value(servername, key, servers):
+    """Return the value of a key for a given server."""
+    value = [server[key] for server in servers if server['Name'] == servername]
+    return value[0]
+
+
+def get_config_value(group, key):
+    """Return specific value from CONFIG_FILE as string"""
+    config = configparser.ConfigParser()
+    config.read(CONFIG_FILE)
+
+    return config[group][key]
+
+
+def set_config_value(group, key, value):
+    """Write a specific value to CONFIG_FILE"""
+
+    config = configparser.ConfigParser()
+    config.read(CONFIG_FILE)
+    config[group][key] = str(value)
+
+    logger.debug(
+        "Writing {0} to [{1}] in config file".format(key, group)
+    )
+
+    with open(CONFIG_FILE, "w+") as f:
+        config.write(f)
+
+
+def get_ip_info():
+    """Return the current public IP Address"""
+    logger.debug("Getting IP Information")
+    ip_info = call_api("https://api.protonmail.ch/vpn/location")
+
+    ip = ip_info["IP"]
+    isp = ip_info["ISP"]
+
+    return ip, isp
+
+
+def get_country_name(code):
+    """Return the full name of a country from code"""
+
+    from .country_codes import country_codes
+
+    try:
+        return country_codes["cc_to_name"][code]
+    except KeyError:
+        return code
+
+
+def get_fastest_server(server_pool):
+    """Return the fastest server from a list of servers"""
+
+    # Sort servers by "speed" and select top n according to pool_size
+    fastest_pool = sorted(
+        server_pool, key=lambda server: server["Score"]
+    )
+    if len(fastest_pool) >= 50:
+        pool_size = 4
+    else:
+        pool_size = 1
+    logger.debug(
+        "Returning fastest server with pool size {0}".format(pool_size)
+    )
+    fastest_server = random.choice(fastest_pool[:pool_size])["Name"]
+    return fastest_server
+
+
+def is_connected():
+    """Check if a VPN connection already exists."""
+    ovpn_processes = subprocess.run(["pgrep", "openvpn"],
+                                    stdout=subprocess.PIPE)
+    ovpn_processes = ovpn_processes.stdout.decode("utf-8").split()
+
+    logger.debug(
+        "Checking connection Status. OpenVPN processes: {0}"
+        .format(len(ovpn_processes))
+        )
+    return True if ovpn_processes != [] else False
+
+
+def cidr_to_netmask(cidr):
+    netmask = "0"
+    cidr_netmask = {
+        1: "128.0.0.0",
+        2: "192.0.0.0",
+        3: "224.0.0.0",
+        4: "240.0.0.0",
+        5: "248.0.0.0",
+        6: "252.0.0.0",
+        7: "254.0.0.0",
+        8: "255.0.0.0",
+        9: "255.128.0.0",
+        10: "255.192.0.0",
+        11: "255.224.0.0",
+        12: "255.240.0.0",
+        13: "255.248.0.0",
+        14: "255.252.0.0",
+        15: "255.254.0.0",
+        16: "255.255.0.0",
+        17: "255.255.128.0",
+        18: "255.255.192.0",
+        19: "255.255.224.0",
+        20: "255.255.240.0",
+        21: "255.255.248.0",
+        22: "255.255.252.0",
+        23: "255.255.254.0",
+        24: "255.255.255.0",
+        25: "255.255.255.128",
+        26: "255.255.255.192",
+        27: "255.255.255.224",
+        28: "255.255.255.240",
+        29: "255.255.255.248",
+        30: "255.255.255.252",
+        31: "255.255.255.254",
+        32: "255.255.255.255",
+    }
+
+    netmask = cidr_netmask[cidr]
+    return netmask
+
+
+def make_ovpn_template():
+    """Create OpenVPN template file."""
+    pull_server_data()
+
+    with open(SERVER_INFO_FILE, "r") as f:
+        server_data = json.load(f)
+
+    # Get the ID of the first server from the API
+    server_id = server_data["LogicalServers"][0]["ID"]
+
+    config_file_response = call_api(
+        "https://api.protonmail.ch/vpn/config?Platform=linux&LogicalID={0}&Protocol=tcp".format(server_id),  # noqa
+        json_format=False
+    )
+
+    with open(TEMPLATE_FILE, "wb") as f:
+        for chunk in config_file_response.iter_content(100000):
+            f.write(chunk)
+            logger.debug("OpenVPN config file downloaded")
+
+    # Write split tunneling config to OpenVPN Template
+    try:
+        if get_config_value("USER", "split_tunnel") == "1":
+            split = True
+        else:
+            split = False
+    except KeyError:
+        split = False
+    if split:
+        logger.debug("Writing Split Tunnel config")
+        with open(SPLIT_TUNNEL_FILE, "r") as f:
+            content = f.readlines()
+
+        with open(TEMPLATE_FILE, "a") as f:
+            for line in content:
+                line = line.rstrip("\n")
+                netmask = None
+
+                if not is_valid_ip(line):
+                    logger.debug(
+                        "[!] '{0}' is invalid. Skipped.".format(line)
+                    )
+                    continue
+
+                if "/" in line:
+                    ip, cidr = line.split("/")
+                    netmask = cidr_to_netmask(int(cidr))
+                else:
+                    ip = line
+
+                if netmask is None:
+                    netmask = "255.255.255.255"
+
+                if is_valid_ip(ip):
+                    f.write(
+                        "\nroute {0} {1} net_gateway".format(ip, netmask)
+                    )
+
+                else:
+                    logger.debug(
+                        "[!] '{0}' is invalid. Skipped.".format(line)
+                    )
+
+        logger.debug("Split Tunneling Written")
+
+    # Remove all remote, proto, up, down and script-security lines
+    # from template file
+    remove_regex = re.compile(r"^(remote|proto|up|down|script-security) .*$")
+
+    for line in fileinput.input(TEMPLATE_FILE, inplace=True):
+        if not remove_regex.search(line):
+            print(line, end="")
+
+    logger.debug("remote and proto lines removed")
+
+    change_file_owner(TEMPLATE_FILE)
+
+
+def change_file_owner(path):
+    """Change the owner of specific files to the sudo user."""
+    uid = int(subprocess.run(["id", "-u", USER],
+                             stdout=subprocess.PIPE).stdout)
+    gid = int(subprocess.run(["id", "-u", USER],
+                             stdout=subprocess.PIPE).stdout)
+
+    current_owner = subprocess.run(["id", "-nu", str(os.stat(path).st_uid)],
+                                   stdout=subprocess.PIPE).stdout
+    current_owner = current_owner.decode().rstrip("\n")
+
+    # Only change file owner if it wasn't owned by current running user.
+    if current_owner != USER:
+        os.chown(path, uid, gid)
+        logger.debug("Changed owner of {0} to {1}".format(path, USER))
+
+
+def check_root():
+    """Check if the program was executed as root and prompt the user."""
+    if getpass.getuser() != "root":
+        print(
+            "[!] The program was not executed as root.\n"
+            "[!] Please run as root."
+        )
+        logger.debug("Program wasn't executed as root")
+        sys.exit(1)
+    else:
+        # Check for dependencies
+        dependencies = ["openvpn", "ip", "sysctl", "pgrep", "pkill"]
+        for program in dependencies:
+            check = subprocess.run(["which", program],
+                                   stdout=subprocess.PIPE,
+                                   stderr=subprocess.PIPE)
+            if not check.returncode == 0:
+                logger.debug("{0} not found".format(program))
+                print("'{0}' not found. \n".format(program),
+                      "Please install {0}.".format(program))
+                sys.exit(1)
+
+
+def check_update():
+    """Return the download URL if an Update is available, False if otherwise"""
+
+    def get_latest_version():
+        """Return the latest version from pypi"""
+        logger.debug("Calling pypi API")
+        try:
+            r = requests.get("https://pypi.org/pypi/protonvpn-cli/json")
+        except (requests.exceptions.ConnectionError,
+                requests.exceptions.ConnectTimeout):
+            logger.debug("Couldn't connect to pypi API")
+            return False
+        try:
+            r.raise_for_status()
+        except requests.exceptions.HTTPError:
+            logger.debug(
+                "HTTP Error with pypi API: {0}".format(r.status_code)
+            )
+            return False
+
+        release = r.json()["info"]["version"]
+
+        return release
+
+    # Determine if an update check should be run
+    check_interval = int(get_config_value("USER", "check_update_interval"))
+    check_interval = check_interval * 24 * 3600
+    last_check = int(get_config_value("metadata", "last_update_check"))
+
+    if (last_check + check_interval) >= time.time():
+        # Don't check for update
+        return
+
+    logger.debug("Checking for new update")
+    current_version = list(VERSION.split("."))
+    current_version = [int(i) for i in current_version]
+    logger.debug("Current: {0}".format(current_version))
+
+    latest_version = get_latest_version()
+    if not latest_version:
+        # Skip if get_latest_version() ran into errors
+        return
+    latest_version = latest_version.split(".")
+    latest_version = [int(i) for i in latest_version]
+    logger.debug("Latest: {0}".format(latest_version))
+
+    for idx, i in enumerate(latest_version):
+        if i > current_version[idx]:
+            logger.debug("Update found")
+            update_available = True
+            break
+        elif i < current_version[idx]:
+            logger.debug("No update")
+            update_available = False
+            break
+    else:
+        logger.debug("No update")
+        update_available = False
+
+    set_config_value("metadata", "last_update_check", int(time.time()))
+
+    if update_available:
+        print()
+        print(
+            "A new Update for ProtonVPN-CLI (v{0}) ".format('.'.join(
+                [str(x) for x in latest_version])
+                ) +
+            "is available.\n" +
+            "Follow the Update instructions on\n" +
+            "https://github.com/ProtonVPN/protonvpn-cli-ng/blob/master/USAGE.md#updating-protonvpn-cli" # noqa
+        )
+
+
+def check_init(check_props=True):
+    """Check if a profile has been initialized, quit otherwise."""
+
+    try:
+        if not int(get_config_value("USER", "initialized")):
+            print(
+                "[!] There has been no profile initialized yet. "
+                "Please run 'protonvpn init'."
+            )
+            logger.debug("Initialized Profile not found")
+            sys.exit(1)
+        elif check_props:
+            # Check if required properties are set.
+            # This is to ensure smooth updates so the user can be warned
+            # when a property is missing and can be ordered
+            # to run `protonvpn configure` or something else.
+
+            required_props = ["username", "tier", "default_protocol",
+                              "dns_leak_protection", "custom_dns"]
+
+            for prop in required_props:
+                try:
+                    get_config_value("USER", prop)
+                except KeyError:
+                    print(
+                        "[!] {0} is missing from configuration.\n".format(prop), # noqa
+                        "[!] Please run 'protonvpn configure' to set it."
+                    )
+                    logger.debug(
+                        "{0} is missing from configuration".format(prop)
+                    )
+                    sys.exit(1)
+    except KeyError:
+        print(
+            "[!] There has been no profile initialized yet. "
+            "Please run 'protonvpn init'."
+        )
+        logger.debug("Initialized Profile not found")
+        sys.exit(1)
+
+
+def is_valid_ip(ipaddr):
+    valid_ip_re = re.compile(
+        r'^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.'
+        r'(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.'
+        r'(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.'
+        r'(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)'
+        r'(/(3[0-2]|[12][0-9]|[1-9]))?$'  # Matches CIDR
+    )
+
+    if valid_ip_re.match(ipaddr):
+        return True
+
+    else:
+        return False
